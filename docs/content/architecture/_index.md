@@ -8,4 +8,4 @@ weight = 5
 
 # Some Chapter title
 
-Lorem Ipsum.
+Lorem Ipsum2.
