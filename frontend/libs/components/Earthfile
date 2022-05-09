@@ -1,0 +1,19 @@
+VERSION 0.6
+FROM node:17-alpine3.14
+WORKDIR /src
+
+
+deps:
+    COPY package-lock.json package.json ./ 
+    RUN npm install
+    SAVE ARTIFACT package-lock.json AS LOCAL package-lock.json
+	SAVE ARTIFACT package.json AS LOCAL package.json
+
+build:
+    FROM +deps
+    COPY . .
+    RUN npm run build-storybook
+    SAVE ARTIFACT storybook-static AS LOCAL storybook-static
+
+deploy:
+    FROM +build

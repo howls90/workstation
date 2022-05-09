@@ -1,0 +1,27 @@
+VERSION 0.6
+ARG VERSION="v1.23.0"
+
+install:
+    FROM +run
+    LOCALLY
+    RUN kubectl apply -f ./linkerd/linkerd.yml
+    RUN kubectl apply -f ./linkerd/viz.yml
+
+run:
+    ARG NUM_CPUS="2"
+    ARG MAX_MEMORY="8000"
+    LOCALLY
+    RUN minikube start --kubernetes-version $VERSION --memory $MAX_MEMORY --cpus $NUM_CPUS
+
+delete:
+    LOCALLY
+    RUN minikube delete
+
+clear:
+    LOCALLY
+    FROM +delete
+    FROM +install
+
+dashboard:
+    LOCALLY
+    RUN linkerd viz dashboard

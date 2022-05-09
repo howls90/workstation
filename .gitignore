@@ -1,0 +1,4 @@
+cli
+backend/apps/*
+backend/libs/*
+!backend/libs/files

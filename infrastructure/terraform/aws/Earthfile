@@ -1,0 +1,19 @@
+VERSION 0.6
+
+prep:
+    FROM hashicorp/terraform:light
+    COPY . .
+    RUN terraform init
+
+# earthly -P +localstack
+localstack:
+    FROM +prep
+
+    ARG AWS_ACCESS_KEY_ID=mock-id
+    ARG AWS_SECRET_ACCESS_KEY=mock-key
+    ARG AWS_DEFAULT_REGION=us-east-1
+
+    WITH DOCKER --pull localstack/localstack:0.11.5
+        RUN docker run -d -p 4566:4566 -e SERVICES=s3 --name localstack --network="host" localstack/localstack:0.11.5 && \
+            terraform apply -auto-approve
+    END 

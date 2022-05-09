@@ -1,0 +1,65 @@
+[Search-placeholder]
+other = "खोजे..."
+
+[Clear-History]
+other = "इतिहास मिटाएँ"
+
+[Attachments-label]
+other = "संलग्नंक (अटैचमेंट)"
+
+[title-404]
+other = "त्रुटि"
+
+[message-404]
+other = "यह पृष्ठ अभि अनुपलब्ध है!"
+
+[Go-to-homepage]
+other = "मुख्य पृष्ठ पर जाऐ"
+
+[Edit-this-page]
+other = "संपादन करना"
+
+[Shortcuts-Title]
+other = "अधिक सामग्री दिखाएं"
+
+[Expand-title]
+other = "विस्तार करे..."
+
+[Navigation-toggle]
+other = "Menú"
+
+[Toc-toggle]
+other = "विषयसूची"
+
+[Byte-symbol]
+other = "B"
+
+[Kilobyte-symbol]
+other = "KB"
+
+[Megabyte-symbol]
+other = "MB"
+
+[note]
+other = "Note"
+
+[info]
+other = "Info"
+
+[tip]
+other = "Tip"
+
+[warning]
+other = "Warning"
+
+[Copy-to-clipboard]
+other = "Copy to clipboard"
+
+[Copied-to-clipboard]
+other = "Copied to clipboard!"
+
+[Copy-link-to-clipboard]
+other = "Copy link to clipboard"
+
+[Link-copied-to-clipboard]
+other = "Copied link to clipboard!"

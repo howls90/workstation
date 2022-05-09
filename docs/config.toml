@@ -1,0 +1,6 @@
+baseURL = 'https://howls90.github.io/monorepo'
+languageCode = 'en-us'
+title = 'Test'
+theme = "hugo-theme-relearn"
+
+BookComments = true

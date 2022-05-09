@@ -1,0 +1,11 @@
+VERSION 0.6
+FROM klakegg/hugo:0.93.2
+WORKDIR /src
+
+build:
+    COPY . .
+    RUN hugo
+    SAVE ARTIFACT public AS LOCAL public
+
+deploy:
+    FROM +build

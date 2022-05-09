@@ -1,0 +1,10 @@
+VERSION 0.6
+
+deps:
+    FROM golang:1.17-alpine
+    WORKDIR /src
+
+artifact:
+    FROM +deps
+    COPY main.go .
+    SAVE ARTIFACT .
