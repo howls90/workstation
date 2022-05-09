@@ -1,4 +1,4 @@
-baseURL = 'https://howls90.github.io/monorepo'
+baseURL = 'https://howls90.github.io/workstation/hugo'
 languageCode = 'en-us'
 title = 'Test'
 theme = "hugo-theme-relearn"
